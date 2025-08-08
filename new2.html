@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+        
+
+        .grid-layout {
+            display: grid;
+            grid-template-areas:
+                "navbar navbar"
+                "sidebar main"
+                "footer footer";
+            grid-template-columns: 250px 1fr;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+            transition: grid-template-columns 0.3s ease;
+        }
+
+        .grid-layout.sidebar-hidden {
+            grid-template-columns: 0px 1fr;
+        }
+
+        .navbar {
+            grid-area: navbar;
+            width: 100%;
+            margin-left: 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .container-fluid {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #ffffff;
+            padding: 1rem;
+            border-right: 1px solid #dee2e6;
+            overflow-y: auto;
+            overflow-x: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .sidebar.hidden {
+            width: 0;
+            padding: 0;
+            border-right: none;
+        }
+
+        .main {
+            grid-area: main;
+            padding: 0;
+            margin: 0;
+            background-color: #f8f9fa;
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+        .footer {
+            grid-area: footer;
+
+            text-align: center;
+            padding: 1rem;
+        }
+
+
+
+        .dropdown-menu.show {
+            animation: dropdownFadeSlide 0.3s ease-in;
+        }
+
+        .navbar-toggler:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler {
+            border: none;
+            outline: none;
+            box-shadow: none !important;
+            transition: transform 0.2s ease;
+        }
+
+        .sidebar h5 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #3c3f42
+        }
+
+        .nav-link {
+            padding-left: 3px;
+            padding-top: 5px;
+            padding-right: 3px;
+            padding-bottom: px;
+            font-size: 15px;
+            color: #444444;
+            text-align: auto;
+
+        }
+
+
+        .nav-item i {
+            margin-right: 10px;
+
+        }
+
+
+        .custom-hover {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .custom-hover:hover {
+            background-color: rgba(153, 187, 238, 0.1);
+            color: #0d6efd;
+            transform: scale(1.05);
+            border-radius: 6px;
+        }
+
+        .Catagory {
+            margin-top: 12px;
+            margin-bottom: 05px;
+            font-size: 0.7rem;
+        }
+
+
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-areas:
+                    "navbar"
+                    "main"
+                    "footer";
+                grid-template-columns: 1fr;
+                overflow-x: hidden;
+            }
+
+            .grid-layout.sidebar-hidden {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: fixed;
+                top: 56px;
+                left: 0;
+                width: 250px;
+                height: calc(100vh - 56px);
+                z-index: 1000;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                padding: 1rem;
+                border-right: 1px solid #dee2e6;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+
+            .sidebar.show {
+                transform: translateX(0);
+                box-shadow: 2px 0 5px rgba(144, 143, 143, 0.2);
+            }
+
+            .sidebar.hidden {
+                transform: translateX(-100%);
+                width: 250px;
+                padding: 1rem;
+                border-right: 1px solid #dee2e6;
+            }
+
+            .main {
+                overflow-x: hidden;
+                width: 100%;
+            }
+
+            .container-fluid {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .col-3, .col-12, .col-sm-6, .col-lg-3, .col-lg-4, .col-lg-8 {
+                padding-left: 7.5px;
+                padding-right: 7.5px;
+            }
+        }
+
+        @keyframes dropdownFadeSlide {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-layout">
+        <aside class="sidebar custom-shadow " id="sidebar">
+            <h5>SoftLenze</h5>
+            <ul class="nav flex-column">
+                <small class=" Catagory text-uppercase text-muted fw-bold ">Home</small>
+                <li class="nav-item d-flex justify-content-between align-items-center  custom-hover">
+                    <a class="nav-link flex-grow-1" href="#"><i class="fa-solid fa-house "></i>
+                        Dashboard</a>
+
+                </li>
+
+                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                    <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-users"></i> Users&Roles</a>
+                    <i class="fa-solid fa-angle-right ms-auto"></i>
+                </li>
+                <li class="nav-item d-flex justify-content-between align-items-center">
+                    <a class="nav-link flex-grow-1 custom-hover" href="#"><i class="fa-solid fa-cash-register"></i>
+                        POS</a>
+
+                </li>
+                <small class=" Catagory text-uppercase text-muted fw-bold">Products</small>
+                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                    <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-shopping-cart"></i> Sales</a>
+                    <i class="fa-solid fa-angle-right ms-auto"></i>
+                </li>
+                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                    <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-bag-shopping"></i> Purchases</a>
+                    <i class="fa-solid fa-angle-right ms-auto"></i>
+                </li>
+                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                    <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-wrench"></i> Manufacture</a>
+                    <i class="fa-solid fa-angle-right ms-auto"></i>
+                </li>
+                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                    <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-database"></i> Stock</a>
+                    <i class="fa-solid fa-angle-right ms-auto"></i>
+                </li>
+                <small class=" Catagory text-uppercase text-muted fw-bold">Other</small>
+                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                    <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-box"></i> Expenses</a>
+                    <i class="fa-solid fa-angle-right ms-auto"></i>
+                </li>
+                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                    <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-wallet"></i> Manage Capital</a>
+                    <i class="fa-solid fa-angle-right ms-auto"></i>
+                </li>
+                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                    <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-money-bill-transfer"></i> General
+                        Transactions</a>
+                </li>
+                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                    <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-dollar-sign"></i> Accounts</a>
+                    <i class="fa-solid fa-angle-right ms-auto"></i>
+                </li>
+                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                    <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-file"></i> Reports</a>
+                    <i class="fa-solid fa-angle-right ms-auto"></i>
+                </li>
+                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                    <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-blog"></i> Blog</a>
+                    <i class="fa-solid fa-angle-right ms-auto"></i>
+                </li>
+                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                    <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+                    <i class="fa-solid fa-angle-right ms-auto"></i>
+                </li>
+
+            </ul>
+        </aside>
+
+
+        <main class="main">
+            <nav class="navbar bg-white shadow-sm">
+                <div class="container-fluid">
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" id="toggle" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="dropdown">
+                        <ul class="nav justify-content-end align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center" href="#">
+                                    <i class="fa-solid fa-qrcode fs-6 text-dark"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center active" aria-current="page" href="#">
+                                    <i class="fa-solid fa-lightbulb fs-6 text-dark"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button class="btn btn-white dropdown-toggle border-0 d-flex align-items-center"
+                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid text-primary fa-circle-user fs-5 me-1"></i> Admin
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Log out</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container-fluid p-3">
+                <h5 class="text-muted fw-bold mb-3">Dashboard</h5>
+                <div class="container-fluid">
+                    <div class="row g-3 mb-4">
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="border p-3 rounded bg-white">
+                                <h6>Metric 1</h6>
+                                <p class="mb-0">Content here</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="border p-3 rounded bg-white">
+                                <h6>Metric 2</h6>
+                                <p class="mb-0">Content here</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="border p-3 rounded bg-white">
+                                <h6>Metric 3</h6>
+                                <p class="mb-0">Content here</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="border p-3 rounded bg-white">
+                                <h6>Metric 4</h6>
+                                <p class="mb-0">Content here</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-12 col-lg-8">
+                            <div class="border p-3 rounded bg-white">
+                                <h6>Chart Area</h6>
+                                <p class="mb-0">Large content area for charts</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="border p-3 rounded bg-white">
+                                <h6>Side Content</h6>
+                                <p class="mb-0">Additional information</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </main>
+
+
+        <footer class="footer bg-white text-black p-3 fs-6 text-muted">
+            &copy; 2025 Developed by <b>SoftLenze.com</b>
+        </footer>
+
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggle');
+        const sidebar = document.getElementById('sidebar');
+        const gridLayout = document.querySelector('.grid-layout');
+
+        toggleBtn.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                // Mobile behavior - slide in/out
+                sidebar.classList.toggle('show');
+            } else {
+                // Desktop behavior - collapse/expand
+                sidebar.classList.toggle('hidden');
+                gridLayout.classList.toggle('sidebar-hidden');
+            }
+        });
+
+        // Handle window resize to ensure proper behavior
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                // Reset mobile classes when switching to desktop
+                sidebar.classList.remove('show');
+            } else {
+                // Reset desktop classes when switching to mobile
+                sidebar.classList.remove('hidden');
+                gridLayout.classList.remove('sidebar-hidden');
+            }
+        });
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', (event) => {
+            if (window.innerWidth <= 768) {
+                const isClickInsideSidebar = sidebar.contains(event.target);
+                const isClickOnToggle = toggleBtn.contains(event.target);
+
+                // if (!isClickInsideSidebar && !isClickOnToggle && sidebar.classList.contains('show')) {
+                //     sidebar.classList.remove('show');
+                // }
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
+</body>
+</html>

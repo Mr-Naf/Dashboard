@@ -1,0 +1,112 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sidebar{
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(167, 167, 167);
+    height: 100%;
+    width: 250px;
+}
+.sidebar .logo-details{
+height: 60px;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+.sidebar .logo-details i{
+    font-size: 28px;
+   color: antiquewhite;
+   height: 50px;
+   min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+
+}
+
+
+.sidebar .logo-details .logo{
+    color: #808080;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 auto;
+    text-align: center;
+}
+.sidebar .nav-links{
+   height: 100%;
+   padding-top: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.sidebar .nav-links li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.sidebar .nav-links li i{
+    height: 50px;
+    min-width: 60px;
+    text-align: center;
+    line-height: 50px;
+    color: black;
+}
+
+.sidebar .nav-links li a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: black;
+    padding: 10px 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.sidebar .nav-links li a i{
+    margin-right: 12px;
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar .nav-links li a .link_name{
+    font-size: 16px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.sidebar .nav-links li a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+.sidebar .nav-links li .icon-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+}
+
+.sidebar .nav-links li .icon-link a{
+    flex: 1;
+    padding: 10px 10px;
+}
+
+.sidebar .nav-links li .icon-link i.fa-angle-right{
+    margin-left: 10px;
+    padding-right: 10px;
+    color: #666;
+    font-size: 14px;
+}
