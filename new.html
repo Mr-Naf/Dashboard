@@ -10,7 +10,7 @@
         body {
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: sans-serif;
             background-color: #f8f9fa;
             overflow-x: hidden;
         }
@@ -100,10 +100,10 @@
         }
 
         .nav-link {
-            padding-left: 3px;
-            padding-top: 5px;
-            padding-right: 3px;
-            padding-bottom: px;
+
+            padding-top: 3.5px;
+            padding-right: 3.5px;
+            padding-bottom: 3.5px;
             font-size: 15px;
             color: #444444;
             text-align: auto;
@@ -122,8 +122,8 @@
         }
 
         .custom-hover:hover {
-            background-color: rgba(153, 187, 238, 0.1);
-            color: #0d6efd;
+            background-color: rgba(86, 118, 166, 0.1);
+            color: #1c71ef;
             transform: scale(1.05);
             border-radius: 6px;
         }
@@ -185,23 +185,30 @@
                 transform: translateY(0);
             }
         }
+
+        .icon_box {
+
+            border-radius: 8px;
+            height: 48px;
+            width: 48px;
+        }
     </style>
 </head>
 
 <body>
 
     <div class="grid-layout">
-        <aside class="sidebar custom-shadow " id="sidebar">
-            <h5 class="text-primary">SoftLenze</h5>
+        <aside class="sidebar shadow-sm border-0 " id="sidebar">
+            <h5 class="" style="color: rgb(0, 0, 184); font-weight: bold;">SoftLenze</h5>
             <ul class="nav flex-column">
                 <small class=" Catagory text-uppercase text-muted fw-bold ">Home</small>
-                <li class="nav-item d-flex justify-content-between align-items-center  custom-hover">
-                    <a class="nav-link flex-grow-1" href="#"><i class="fa-solid fa-house "></i>
+                <li class="nav-item d-flex p-1 justify-content-between align-items-center  custom-hover">
+                    <a class="nav-link flex-grow-1" href="#"><i class="fa-solid fa-house"></i>
                         Dashboard</a>
 
                 </li>
 
-                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
                     <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-users"></i> Users&Roles</a>
                     <i class="fa-solid fa-angle-right ms-auto"></i>
                 </li>
@@ -211,48 +218,48 @@
 
                 </li>
                 <small class=" Catagory text-uppercase text-muted fw-bold">Products</small>
-                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
                     <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-shopping-cart"></i> Sales</a>
                     <i class="fa-solid fa-angle-right ms-auto"></i>
                 </li>
-                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
                     <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-bag-shopping"></i> Purchases</a>
                     <i class="fa-solid fa-angle-right ms-auto"></i>
                 </li>
-                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
                     <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-wrench"></i> Manufacture</a>
                     <i class="fa-solid fa-angle-right ms-auto"></i>
                 </li>
-                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
                     <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-database"></i> Stock</a>
                     <i class="fa-solid fa-angle-right ms-auto"></i>
                 </li>
                 <small class=" Catagory text-uppercase text-muted fw-bold">Other</small>
-                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
                     <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-box"></i> Expenses</a>
                     <i class="fa-solid fa-angle-right ms-auto"></i>
                 </li>
-                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
                     <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-wallet"></i> Manage Capital</a>
                     <i class="fa-solid fa-angle-right ms-auto"></i>
                 </li>
-                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
                     <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-money-bill-transfer"></i> General
                         Transactions</a>
                 </li>
-                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
                     <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-dollar-sign"></i> Accounts</a>
                     <i class="fa-solid fa-angle-right ms-auto"></i>
                 </li>
-                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
                     <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-file"></i> Reports</a>
                     <i class="fa-solid fa-angle-right ms-auto"></i>
                 </li>
-                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
                     <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-blog"></i> Blog</a>
                     <i class="fa-solid fa-angle-right ms-auto"></i>
                 </li>
-                <li class="nav-item d-flex justify-content-between align-items-center custom-hover">
+                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
                     <a class="nav-link flex-grow-1 " href="#"><i class="fa-solid fa-gear"></i> Settings</a>
                     <i class="fa-solid fa-angle-right ms-auto"></i>
                 </li>
@@ -264,11 +271,16 @@
         <main class="main">
             <nav class="navbar bg-white shadow-sm">
                 <div class="container-fluid">
-                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav" id="toggle" aria-controls="navbarNav" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <div class="d-flex align-items-center">
+                        <button class="navbar-toggler border-0 me-2" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" id="toggle" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <span class="text-muted fw-semibold">Welcome, Admin</span>
+                    </div>
+
+
                     <div class="dropdown">
                         <ul class="nav justify-content-end align-items-center">
                             <li class="nav-item">
@@ -307,165 +319,170 @@
 
             </div>
             <div class="container-fluid mt-1 mb-1 ">
-
-                <div class="row g-3 mb-4">
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="shadow-sm p-2 rounded bg-white">
-                            <div class="row m-1">
-                                <div class="col-3 d-flex align-items-center  bg-light">
-                                    <i class="fa-solid fa-gear m-2"></i>
+                <div class="row g-3 ms-auto me-auto mb-3">
+                    <div class="col-12  col-sm-6 col-lg-3">
+                        <div class="shadow-sm p-2  rounded bg-white">
+                            <div class="row m-1 ">
+                                <div class="col-3 d-flex   justify-content-center align-items-center icon_box"
+                                    style="background-color: #cfe1ff;">
+                                    <i class="fa-solid text-primary fa-circle-user fs-4" style="margin: 8px;"></i>
                                 </div>
-                                <div class="col-9  flex-column">
-                                    <div class="  align-items-center ">
-                                        <p class="mb-0">Top</p>
-                                    </div>
-                                    <div class=" align-items-center ">
-                                        <h5 class="mb-0" style="padding-left: 10px;">Bottom</h5>
-                                    </div>
+                                <div class="col-9 d-flex flex-column justify-content-center">
+                                    <p class="mb-0 " style="font-size: 14px; ">Total Customers</p>
+                                    <h6 class="mb-0 fw-semibold" style="padding-left: 08px;">22</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="shadow-sm p-2 rounded bg-white">
-                            <div class="row m-1">
-                                <div class="col-3 d-flex align-items-center  bg-light">
-                                    <i class="fa-solid fa-gear m-2"></i>
+                            <div class="row m-1 ">
+                                <div class="col-3 d-flex   justify-content-center align-items-center icon_box"
+                                    style="background-color: #cfe1ff;">
+                                    <i class="fa-solid text-primary fa-circle-user fs-4" style="margin: 8px;"></i>
                                 </div>
-                                <div class="col-9  flex-column">
-                                    <div class="  align-items-center ">
-                                        <p class="mb-0">Top</p>
-                                    </div>
-                                    <div class=" align-items-center ">
-                                        <h5 class="mb-0" style="padding-left: 10px;">Bottom</h5>
-                                    </div>
+                                <div class="col-9 d-flex flex-column justify-content-center">
+                                    <p class="mb-0 " style="font-size: 14px; ">Total Suppliers</p>
+                                    <h6 class="mb-0 fw-semibold" style="padding-left: 08px;">1</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="shadow-sm p-2 rounded bg-white">
-                            <div class="row m-1">
-                                <div class="col-3 d-flex align-items-center  bg-light">
-                                    <i class="fa-solid fa-gear m-2"></i>
+                            <div class="row m-1 ">
+                                <div class="col-3 d-flex   justify-content-center align-items-center icon_box"
+                                    style="background-color: #ffdede;">
+                                    <i class="fa-solid fa-solid fa-suitcase text-danger  fs-4" style="margin: 8px;"></i>
                                 </div>
-                                <div class="col-9  flex-column">
-                                    <div class="  align-items-center ">
-                                        <p class="mb-0">Top</p>
-                                    </div>
-                                    <div class=" align-items-center ">
-                                        <h5 class="mb-0" style="padding-left: 10px;">Bottom</h5>
-                                    </div>
+                                <div class="col-9 d-flex flex-column justify-content-center">
+                                    <p class="mb-0 " style="font-size: 14px; ">Total Products</p>
+                                    <h6 class="mb-0 fw-semibold" style="padding-left: 08px;">16</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="shadow-sm p-2 rounded bg-white">
-                            <div class="row m-1">
-                                <div class="col-3 d-flex align-items-center  bg-light">
-                                    <i class="fa-solid fa-gear m-2"></i>
+                            <div class="row m-1 ">
+                                <div class="col-3 d-flex   justify-content-center align-items-center icon_box"
+                                    style="background-color: #ffdede;">
+                                    <i class="fa-solid fa-suitcase text-danger fs-4" style="margin: 8px;"></i>
                                 </div>
-                                <div class="col-9  flex-column">
-                                    <div class="  align-items-center ">
-                                        <p class="mb-0">Top</p>
-                                    </div>
-                                    <div class=" align-items-center ">
-                                        <h5 class="mb-0" style="padding-left: 10px;">Bottom</h5>
-                                    </div>
+                                <div class="col-9 d-flex flex-column justify-content-center">
+                                    <p class="mb-0 " style="font-size: 14px; ">Total Categories</p>
+                                    <h6 class="mb-0 fw-semibold" style="padding-left: 08px;">5</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row g-3">
+                <div class="row g-3 ms-auto me-auto">
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="shadow-sm p-2 rounded bg-white">
-                            <div class="row m-1">
-                                <div class="col-3 d-flex align-items-center  bg-light">
-                                    <i class="fa-solid fa-gear m-2"></i>
+                            <div class="row m-1 ">
+                                <div class="col-3 d-flex   justify-content-center align-items-center icon_box"
+                                    style="background-color:rgb(165, 255, 165);">
+                                    <i class="fa-solid fa-sack-dollar text-success  fs-4" style="margin: 8px;"></i>
                                 </div>
-                                <div class="col-9  flex-column">
-                                    <div class="  align-items-center ">
-                                        <p class="mb-0">Top</p>
-                                    </div>
-                                    <div class=" align-items-center ">
-                                        <h5 class="mb-0" style="padding-left: 10px;">Bottom</h5>
-                                    </div>
+                                <div class="col-9 d-flex flex-column justify-content-center">
+                                    <p class="mb-0 " style="font-size: 14px; ">Total Sales</p>
+                                    <h6 class="mb-0 fw-semibold" style="padding-left: 08px;">111,234.45</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="shadow-sm p-2 rounded bg-white">
-                            <div class="row m-1">
-                                <div class="col-3 d-flex align-items-center  bg-light">
-                                    <i class="fa-solid fa-gear m-2"></i>
+                            <div class="row m-1 ">
+                                <div class="col-3 d-flex   justify-content-center align-items-center icon_box"
+                                    style="background-color:rgb(165, 255, 165);">
+                                    <i class="fa-solid fa-sack-dollar text-success  fs-4" style="margin: 8px;"></i>
                                 </div>
-                                <div class="col-9  flex-column">
-                                    <div class="  align-items-center ">
-                                        <p class="mb-0">Top</p>
-                                    </div>
-                                    <div class=" align-items-center ">
-                                        <h5 class="mb-0" style="padding-left: 10px;">Bottom</h5>
-                                    </div>
+                                <div class="col-9 d-flex flex-column justify-content-center">
+                                    <p class="mb-0 " style="font-size: 14px; ">Total Sales Due</p>
+                                    <h6 class="mb-0 fw-semibold" style="padding-left: 08px;">0.00</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="shadow-sm p-2 rounded bg-white">
-                           <div class="row m-1">
-                                <div class="col-3 d-flex align-items-center  bg-light">
-                                    <i class="fa-solid fa-gear m-2"></i>
+                            <div class="row m-1 ">
+                                <div class="col-3 d-flex   justify-content-center align-items-center icon_box"
+                                    style="background-color:rgb(255, 236, 200);">
+                                    <i class="fa-solid text-warning fa-dollar-sign fs-4" style="margin: 8px;"></i>
                                 </div>
-                                <div class="col-9  flex-column">
-                                    <div class="  align-items-center ">
-                                        <p class="mb-0">Top</p>
-                                    </div>
-                                    <div class=" align-items-center ">
-                                        <h5 class="mb-0" style="padding-left: 10px;">Bottom</h5>
-                                    </div>
+                                <div class="col-9 d-flex flex-column justify-content-center">
+                                    <p class="mb-0 " style="font-size: 14px; ">Total Purchases</p>
+                                    <h6 class="mb-0 fw-semibold" style="padding-left: 08px;">145,003.00</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="shadow-sm p-2 rounded bg-white">
-                            <div class="row m-1">
-                                <div class="col-3 d-flex align-items-center  bg-light">
-                                    <i class="fa-solid fa-gear m-2"></i>
+                            <div class="row m-1 ">
+                                <div class="col-3 d-flex   justify-content-center align-items-center icon_box"
+                                    style="background-color:rgb(255, 236, 200);">
+                                    <i class="fa-solid text-warning fa-dollar-sign fs-4" style="margin: 8px;"></i>
                                 </div>
-                                <div class="col-9  flex-column">
-                                    <div class="  align-items-center ">
-                                        <p class="mb-0">Top</p>
-                                    </div>
-                                    <div class=" align-items-center ">
-                                        <h5 class="mb-0" style="padding-left: 10px;">Bottom</h5>
-                                    </div>
+                                <div class="col-9 d-flex flex-column justify-content-center">
+                                    <p class="mb-0 " style="font-size: 14px; ">Total Purchases Due</p>
+                                    <h6 class="mb-0 fw-semibold" style="padding-left: 08px;">146,042.00</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="chart-container m-3 bg-white p-3 rounded shadow-sm">
+                <h5 class="mb-3 fw-semibold text-muted">Sales Overview</h5>
+                <hr width="100%" />
+                <div class="chart-container mt-4">
+                    <div class=" border-0">
+                        <div class="card-body">
+                            <h6 class="text-muted" style="text-align: center; font-size: 0.8rem;font-weight: bold;">Last 30 Days Sales Report</h6>
+                            <canvas id="salesChart" width="300" height="70"></canvas>
+                            <p class=" text-muted" style="text-align: center; 
+                            font-size: 0.8rem;
+                            font-weight: bold;
+                            ">Dates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
-
-
         <footer class="footer bg-white text-black p-3 fs-6 text-muted">
             &copy; 2025 Developed by <b>SoftLenze.com</b>
         </footer>
-
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
+
+
+        const Sales = document.getElementById('salesChart');
+        const salesChart = new Chart(Sales, {
+            type: 'line',
+            data: {
+                labels: ['2025-07-29', '2025-07-30', '2025-07-31', '2025-08-01', '2025-08-04', '2025-08-06', '2025-08-06', '2025-08-06', '2025-08-07'],
+                datasets: [{
+                    label: 'Sales',
+                    data: [22500, 18000, 37000, 6000, 21000, 4000, 2000, 2000, 4000],
+                    borderColor: 'blue',
+                    fill: false
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        // 
+
         const toggleBtn = document.getElementById('toggle');
         const sidebar = document.getElementById('sidebar');
         const gridLayout = document.querySelector('.grid-layout');
