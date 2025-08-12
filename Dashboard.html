@@ -1,358 +1,691 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
     <link rel="stylesheet" href="dashboard.css">
+
+
 </head>
 
 <body>
-    <div class="  grid-layout ">
-        <aside class="sidebar border-0" id="sidebar">
-            <h5 style="color: rgb(0, 0, 184); font-weight: bold;">SOFTLENZ</h5>
-            <ul class="nav flex-column mt-4">
-                <small class="Catagory text-uppercase text-muted fw-bold ps-3">Home</small>
-                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
-                    <a class="nav-link flex-grow-1" href="#"><i class="fa-solid fa-house"></i> Dashboard</a>
-                </li>
+    <div class="flex-layout">
+        <div class="content-row">
+            <aside class="sidebar border-0" id="sidebar">
+                <div class="logo sticky-top bg-white ">
+                    <img class="" src="https://cartlenz.softlenz.com/public/logo.png">
+                </div>
 
-                <li class="nav-item d-flex p-1 justify-content-between align-items-center  custom-hover hover-area">
-                    <a class="nav-link flex-grow-1 toggle-dropdown" href="#"><i class="fa-solid fa-users"></i>
-                        Users&Roles</a>
-                    <i class="fa-solid fa-angle-right ms-auto icon "></i>
-                </li>
-                <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
-                    <li><a href="#" class="nav-link custom-hover">View Users</a></li>
-                    <li><a href="#" class="nav-link custom-hover">Add Role</a></li>
+                <ul class="nav flex-column ">
+                    <small class="category text-uppercase text-muted ">Home</small>
+                    <li class="nav-item d-flex p-2 justify-content-between align-items-center custom-hover">
+                        <a class="nav-link navSide flex-grow-1" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-home">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg> <span class="">Dashboard</span> </a>
+
+                    </li>
+
+                    <li class="nav-item d-flex p-2 justify-content-between align-items-center  custom-hover  ">
+                        <a class="nav-link navSide flex-grow-1 toggle-dropdown" href="#"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-users">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            Users & Roles</a>
+                        <i class="fa-solid fa-angle-right ms-auto icon "></i>
+                    </li>
+                    <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
+                        <li><a href="#" class="nav-link custom-hover">View Users</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Add Role</a></li>
+                    </ul>
+
+                    <li class="nav-item d-flex p-2 justify-content-between align-items-center custom-hover">
+                        <a class="nav-link navSide flex-grow-1" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-grid">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg></i>POS</a>
+                    </li>
+                    <small class="category text-uppercase text-muted ">Product</small>
+                    <li class="nav-item  d-flex p-2 justify-content-between align-items-center custom-hover  ">
+                        <a class="nav-link navSide flex-grow-1 toggle-dropdown" href="#"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-shopping-cart">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg></i>
+                            Sales</a>
+                        <i class="fa-solid fa-angle-right ms-auto icon"></i>
+                    </li>
+                    <ul class="dropdown-submenu list-unstyled ps-4 pe-4">
+                        <li><a href="#" class="nav-link custom-hover">All Sales</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Add Sale</a></li>
+                        <li><a href="#" class="nav-link custom-hover">All Sale Items</a></li>
+                        <li><a href="#" class="nav-link custom-hover">All Sale Returns</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Customers</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Draft Sales</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Add Quotation</a></li>
+                        <li><a href="#" class="nav-link custom-hover">All Quotations</a></li>
+                    </ul>
+
+                    <li class="nav-item d-flex p-2 justify-content-between align-items-center custom-hover  ">
+                        <a class="nav-link navSide flex-grow-1 toggle-dropdown" href="#"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-shopping-bag">
+                                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <path d="M16 10a4 4 0 0 1-8 0"></path>
+                            </svg>
+                            Purchases</a>
+                        <i class="fa-solid fa-angle-right ms-auto icon "></i>
+                    </li>
+                    <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
+                        <li><a href="#" class="nav-link custom-hover">All Purchases</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Add Purchases</a></li>
+                        <li><a href="#" class="nav-link custom-hover">All Purchase Items</a></li>
+                        <li><a href="#" class="nav-link custom-hover">All Purchase Returns</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Suppliers</a></li>
+                    </ul>
+                    <li class="nav-item d-flex p-2 justify-content-between align-items-center custom-hover  ">
+                        <a class="nav-link navSide flex-grow-1 toggle-dropdown" href="#"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-package">
+                                <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Products</a>
+                        <i class="fa-solid fa-angle-right ms-auto icon "></i>
+                    </li>
+                    <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
+                        <li><a href="#" class="nav-link custom-hover">All Products</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Create Product</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Expired Products</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Categories</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Brands</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Units</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Variant Attributes</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Attribute Values</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Warranties</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Barcode Print</a></li>
+                    </ul>
+
+                    <li class="nav-item d-flex p-2 justify-content-between align-items-center custom-hover  ">
+                        <a class="nav-link navSide flex-grow-1 toggle-dropdown" href="#"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-tool">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                </path>
+                            </svg>
+                            Manufacture</a>
+                        <i class="fa-solid fa-angle-right ms-auto icon "></i>
+                    </li>
+                    <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
+                        <li><a href="#" class="nav-link custom-hover">View Manufacture</a></li>
+                        <li><a href="#" class="nav-link custom-hover">History</a></li>
+                    </ul>
+                    <li class="nav-item d-flex p-2 justify-content-between align-items-center custom-hover  ">
+                        <a class="nav-link navSide flex-grow-1 toggle-dropdown" href="#"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-database">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
+                            Stock</a>
+                        <i class="fa-solid fa-angle-right ms-auto icon "></i>
+                    </li>
+                    <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
+                        <li><a href="#" class="nav-link custom-hover">Manage Stock</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Low Stocks</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Stock History</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Discrepancies</a></li>
+                    </ul>
+
+                    <small class="category text-uppercase text-muted ">Other</small>
+                    <li class="nav-item d-flex p-2 justify-content-between align-items-center custom-hover  ">
+                        <a class="nav-link navSide flex-grow-1 toggle-dropdown" href="#"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-archive">
+                                <polyline points="21 8 21 21 3 21 3 8"></polyline>
+                                <rect x="1" y="3" width="22" height="5"></rect>
+                                <line x1="10" y1="12" x2="14" y2="12"></line>
+                            </svg>
+                            Expenses</a>
+                        <i class="fa-solid fa-angle-right ms-auto icon "></i>
+                    </li>
+                    <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
+                        <li><a href="#" class="nav-link custom-hover">All Expenses</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Expense Categories</a></li>
+                    </ul>
+
+                    <li class="nav-item d-flex p-2 justify-content-between align-items-center custom-hover  ">
+                        <a class="nav-link navSide flex-grow-1 toggle-dropdown" href="#"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-briefcase">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>Manage Capital</a>
+                        <i class="fa-solid fa-angle-right ms-auto icon "></i>
+                    </li>
+                    <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
+                        <li><a href="#" class="nav-link custom-hover">Owners</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Contributions</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Withdrawals</a></li>
+                    </ul>
+
+                    <li class="nav-item d-flex p-2 justify-content-between align-items-center custom-hover">
+                        <a class="nav-link navSide flex-grow-1" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-hash">
+                                <line x1="4" y1="9" x2="20" y2="9"></line>
+                                <line x1="4" y1="15" x2="20" y2="15"></line>
+                                <line x1="10" y1="3" x2="8" y2="21"></line>
+                                <line x1="16" y1="3" x2="14" y2="21"></line>
+                            </svg>General Transactions</a>
+                    </li>
+
+                    <li class="nav-item d-flex p-2 justify-content-between align-items-center custom-hover  ">
+                        <a class="nav-link navSide flex-grow-1 toggle-dropdown" href="#"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-dollar-sign">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>Accounts</a>
+                        <i class="fa-solid fa-angle-right ms-auto icon "></i>
+                    </li>
+                    <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
+                        <li><a href="#" class="nav-link custom-hover">All Accounts</a></li>
+                        <li><a href="#" class="nav-link custom-hover">All Sub Accounts</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Journal Entries</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Transactions</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Trial Balance</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Balance Sheet</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Income Statement</a></li>
+                    </ul>
+
+                    <li class="nav-item d-flex p-2 justify-content-between align-items-center custom-hover  ">
+                        <a class="nav-link navSide flex-grow-1 toggle-dropdown" href="#"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-file-text">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>Reports</a>
+                        <i class="fa-solid fa-angle-right ms-auto icon "></i>
+                    </li>
+                    <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
+                        <li><a href="#" class="nav-link custom-hover">Profit &amp; Loss Report</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Purchases Report</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Sales Report</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Item Sales Report</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Item Purchase Report</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Expenses Report</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Transactions Report</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Customers Report</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Suppliers Report</a></li>
+                    </ul>
+
+                    <li class="nav-item d-flex p-2 justify-content-between align-items-center custom-hover  ">
+                        <a class="nav-link navSide flex-grow-1 toggle-dropdown" href="#"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-book-open">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>Blog</a>
+                        <i class="fa-solid fa-angle-right ms-auto icon "></i>
+                    </li>
+                    <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
+                        <li><a href="#" class="nav-link custom-hover">All Post</a></li>
+                    </ul>
+
+                    <li class="nav-item d-flex p-2 justify-content-between align-items-center custom-hover  ">
+                        <a class="nav-link navSide flex-grow-1 toggle-dropdown" href="#"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-settings">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                </path>
+                            </svg>Settings</a>
+                        <i class="fa-solid fa-angle-right ms-auto icon "></i>
+                    </li>
+                    <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
+                        <li><a href="#" class="nav-link custom-hover">Business Settings</a></li>
+                        <li><a href="#" class="nav-link custom-hover">SMS Settings</a></li>
+                        <li><a href="#" class="nav-link custom-hover">SEO Settings</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Default Settings</a></li>
+                        <li><a href="#" class="nav-link custom-hover">Business Locations</a></li>
+                    </ul>
                 </ul>
+            </aside>
+            <main class="main">
+                <nav class="navbar topbar-custom sticky bg-white shadow-sm " id="navbar">
+                    <div class="container-fluid p-2">
+                        <div class="d-flex align-items-center">
+                            <button class="navbar-toggler border-0 me-2" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav" id="toggle" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <span class="text-muted  " style="font-size: 17.5px;">Welcome, Admin</span>
 
-                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
-                    <a class="nav-link flex-grow-1" href="#"><i class="fa-solid fa-cash-register"></i>POS</a>
-                </li>
+                            </button>
 
-                <small class="Catagory text-uppercase text-muted fw-bold ps-3">Products</small>
-                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover hover-area">
-                    <a class="nav-link flex-grow-1 toggle-dropdown" href="#"><i class="fa-solid fa-shopping-cart"></i>
-                        Sales</a>
-                    <i class="fa-solid fa-angle-right ms-auto icon"></i>
-                </li>
-                <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
-                    <li><a href="#" class="nav-link custom-hover">Daily Sales</a></li>
-                    <li><a href="#" class="nav-link custom-hover">Monthly Sales</a></li>
-                </ul>
-
-                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover hover-area">
-                    <a class="nav-link flex-grow-1 toggle-dropdown" href="#"><i class="fa-solid fa-bag-shopping"></i>
-                        Purchases</a>
-                    <i class="fa-solid fa-angle-right ms-auto icon "></i>
-                </li>
-                <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
-                    <li><a href="#" class="nav-link custom-hover">Purchase List</a></li>
-                    <li><a href="#" class="nav-link custom-hover">New Purchase</a></li>
-                </ul>
-
-                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover hover-area">
-                    <a class="nav-link flex-grow-1 toggle-dropdown" href="#"><i class="fa-solid fa-wrench"></i>
-                        Manufacture</a>
-                    <i class="fa-solid fa-angle-right ms-auto icon "></i>
-                </li>
-                <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
-                    <li><a href="#" class="nav-link custom-hover">Production</a></li>
-                    <li><a href="#" class="nav-link custom-hover">Raw Materials</a></li>
-                </ul>
-
-                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover hover-area">
-                    <a class="nav-link flex-grow-1 toggle-dropdown" href="#"><i class="fa-solid fa-database"></i>
-                        Stock</a>
-                    <i class="fa-solid fa-angle-right ms-auto icon "></i>
-                </li>
-                <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
-                    <li><a href="#" class="nav-link custom-hover">Stock List</a></li>
-                    <li><a href="#" class="nav-link custom-hover">Update Stock</a></li>
-                </ul>
-
-                <small class="Catagory text-uppercase text-muted fw-bold ps-3">Other</small>
-                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover hover-area">
-                    <a class="nav-link flex-grow-1 toggle-dropdown" href="#"><i class="fa-solid fa-box"></i>
-                        Expenses</a>
-                    <i class="fa-solid fa-angle-right ms-auto icon "></i>
-                </li>
-                <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
-                    <li><a href="#" class="nav-link custom-hover">Expense List</a></li>
-                    <li><a href="#" class="nav-link custom-hover">Add Expense</a></li>
-                </ul>
-
-                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover hover-area">
-                    <a class="nav-link flex-grow-1 toggle-dropdown" href="#"><i class="fa-solid fa-wallet"></i> Manage
-                        Capital</a>
-                    <i class="fa-solid fa-angle-right ms-auto icon "></i>
-                </li>
-                <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
-                    <li><a href="#" class="nav-link custom-hover">Capital Overview</a></li>
-                    <li><a href="#" class="nav-link custom-hover">Add Funds</a></li>
-                </ul>
-
-                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover">
-                    <a class="nav-link flex-grow-1" href="#"><i class="fa-solid fa-money-bill-transfer"></i> General
-                        Transactions</a>
-                </li>
-
-                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover hover-area">
-                    <a class="nav-link flex-grow-1 toggle-dropdown" href="#"><i class="fa-solid fa-dollar-sign"></i>
-                        Accounts</a>
-                    <i class="fa-solid fa-angle-right ms-auto icon "></i>
-                </li>
-                <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
-                    <li><a href="#" class="nav-link custom-hover">Bank Accounts</a></li>
-                    <li><a href="#" class="nav-link custom-hover">Cash Accounts</a></li>
-                </ul>
-
-                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover hover-area">
-                    <a class="nav-link flex-grow-1 toggle-dropdown" href="#"><i class="fa-solid fa-file"></i>
-                        Reports</a>
-                    <i class="fa-solid fa-angle-right ms-auto icon "></i>
-                </li>
-                <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
-                    <li><a href="#" class="nav-link custom-hover">Sales Report</a></li>
-                    <li><a href="#" class="nav-link custom-hover">Purchase Report</a></li>
-                </ul>
-
-                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover hover-area">
-                    <a class="nav-link flex-grow-1 toggle-dropdown" href="#"><i class="fa-solid fa-blog"></i> Blog</a>
-                    <i class="fa-solid fa-angle-right ms-auto icon "></i>
-                </li>
-                <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
-                    <li><a href="#" class="nav-link custom-hover">All Posts</a></li>
-                    <li><a href="#" class="nav-link custom-hover">New Post</a></li>
-                </ul>
-
-                <li class="nav-item d-flex p-1 justify-content-between align-items-center custom-hover hover-area">
-                    <a class="nav-link flex-grow-1 toggle-dropdown" href="#"><i class="fa-solid fa-gear"></i>
-                        Settings</a>
-                    <i class="fa-solid fa-angle-right ms-auto icon "></i>
-                </li>
-                <ul class="dropdown-submenu list-unstyled  ps-4  pe-4">
-                    <li><a href="#" class="nav-link custom-hover">General Settings</a></li>
-                    <li><a href="#" class="nav-link custom-hover">User Preferences</a></li>
-                </ul>
-            </ul>
-        </aside>
-
-        <main class="main">
-            <nav class="navbar sticky-top bg-white shadow-sm " id="navbar">
-                <div class="container-fluid">
-                    <div class="d-flex align-items-center">
-                        <button class="navbar-toggler border-0 me-2" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNav" id="toggle" aria-controls="navbarNav" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <span class="text-muted fw-semibold " style="font-size: small;">Welcome, Admin</span>
-                    </div>
-                    <div class="dropdown">
-                        <ul class="nav justify-content-end align-items-center">
-                            <li class="nav-item">
-                                <a class="mx-1 d-flex align-items-center" href="#">
-                                    <i class="fa-solid fa-qrcode fs-6  chard_icon  "></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="mx-1 d-flex align-items-center   " id="" href="#">
-                                    <i class="fa-solid fa-lightbulb fs-6  chard_icon  "></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <div class="dropdown">
-                                    <button
-                                        class="btn btn-white dropdown-toggle border-0 d-flex align-items-center custom-hover"
-                                        type="button" data-bs-toggle="dropdown" aria-expanded="true">
-                                        <i class="fa-solid text-primary fa-circle-user fs-5 me-1"></i> Admin
+                        </div>
+                        <div class="dropdown">
+                            <ul class="nav justify-content-end align-items-center">
+                                <li class="nav-item">
+                                    <button type="button" class="btn nav-link" data-toggle="fullscreen">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-maximize align-middle fullscreen noti-icon">
+                                            <path
+                                                d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+                                            </path>
+                                        </svg>
                                     </button>
-                                    <ul class="dropdown-menu border-0 shadow-sm dropdown-menu-end">
-                                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Log out</a></li>
-                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <button type="button" class="btn nav-link" id="light-dark-mode">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-moon align-middle dark-mode" id="">
+                                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-sun align-middle light-mode">
+                                            <circle cx="12" cy="12" r="5"></circle>
+                                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="adminDropdown">
+                                        <button
+                                            class="btn btn-white dropdown-toggle border-0 d-flex align-items-center "
+                                            type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                            <img src="https://cartlenz.softlenz.com/public/dashboard/assets/images/users/profile.svg"
+                                                alt="user-image" class="rounded-circle"
+                                                style="width: 32px; height:32px;"></i><span class="ms-1 text-muted"
+                                                style="font-size: small;">Admin</span>
+
+                                        </button>
+                                        <ul class="dropdown-menu mt-4 border-0 shadow-sm dropdown-menu-end ">
+                                            <li><a class="dropdown-item adminDd" style="padding:15px 20px;"
+                                                    href="#">Welcome
+                                                    !</a></li>
+                                            <li><a class="dropdown-item adminDd" style="padding:07px 20px;" href="#"><i
+                                                        class="fa-solid fa-circle-user m-1"></i>My Account</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item adminDd" style="padding:07px 20px;" href="#"><i
+                                                        class="fa-solid fa-arrow-right-from-bracket m-1"></i>Log out</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="container text-muted fw-bold m-2 pt-2 pb-2">
+                    <h7>Dashboard</h7>
+                </div>
+
+                <div class="container-fluid mt-1 mb-1 ">
+                    <div class="row g-3 ms-auto me-auto mb-3">
+                        <div class="col-12  col-sm-6 col-lg-3   ">
+                            <a href="" class="text-body text-decoration-none">
+                                <div class="shadow-sm p-2 rounded bg-white  ">
+                                    <div class="row m-2 ">
+                                        <div
+                                            class="col-3  d-flex bg-primary-subtle  border  border-primary border-opacity-10 rounded-2   justify-content-center align-items-center iconBox">
+                                            <div
+                                                class="bg-primary p-1  rounded-circle d-flex justify-content-center align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24">
+                                                    <path fill="#ffffff"
+                                                        d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4">
+                                                    </path>
+                                                </svg>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-9 d-flex flex-column justify-content-center">
+                                            <p class="mb-0 " style="font-size: 14px; ">Total Customers</p>
+                                            <h6 class="mb-0 " style="padding-left: 06px; font-size: 18px;">22</h6>
+                                        </div>
+                                    </div>
                                 </div>
-                            </li>
-                        </ul>
+                            </a>
+                        </div>
+                        <div class="col-12  col-sm-6 col-lg-3   ">
+                            <a href="" class="text-body text-decoration-none">
+                                <div class="shadow-sm p-2 rounded bg-white  ">
+                                    <div class="row m-2 ">
+                                        <div
+                                            class="col-3  d-flex bg-primary-subtle  border  border-primary border-opacity-10 rounded-2   justify-content-center align-items-center iconBox">
+                                            <div
+                                                class="bg-primary p-1  rounded-circle d-flex justify-content-center align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24">
+                                                    <path fill="#ffffff"
+                                                        d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4">
+                                                    </path>
+                                                </svg>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-9 d-flex flex-column justify-content-center">
+                                            <p class="mb-0 " style="font-size: 14px; ">Total Suppliers</p>
+                                            <h6 class="mb-0 " style="padding-left: 06px; font-size: 18px;">2</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-12  col-sm-6 col-lg-3   ">
+                            <a href="" class="text-body text-decoration-none">
+                                <div class="shadow-sm p-2 rounded bg-white  ">
+                                    <div class="row m-2 ">
+                                        <div
+                                            class="col-3  d-flex bg-danger-subtle  border  border-danger border-opacity-10 rounded-2   justify-content-center align-items-center iconBox">
+                                            <div
+                                                class="bg-danger p-1  rounded-circle d-flex justify-content-center align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24">
+                                                    <path fill="#ffffff"
+                                                        d="M22 19H2v2h20zM4 15c0 .5.2 1 .6 1.4s.9.6 1.4.6V6c-.5 0-1 .2-1.4.6S4 7.5 4 8zm9.5-9h-3c0-.4.1-.8.4-1.1s.6-.4 1.1-.4c.4 0 .8.1 1.1.4c.2.3.4.7.4 1.1M7 6v11h10V6h-2q0-1.2-.9-2.1C13.2 3 12.8 3 12 3q-1.2 0-2.1.9T9 6zm11 11c.5 0 1-.2 1.4-.6s.6-.9.6-1.4V8c0-.5-.2-1-.6-1.4S18.5 6 18 6z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-9 d-flex flex-column justify-content-center">
+                                            <p class="mb-0 " style="font-size: 14px; ">Total Products</p>
+                                            <h6 class="mb-0 " style="padding-left: 06px; font-size: 18px;">17</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-12  col-sm-6 col-lg-3   ">
+                            <a href="" class="text-body text-decoration-none">
+                                <div class="shadow-sm p-2 rounded bg-white  ">
+                                    <div class="row m-2 ">
+                                        <div
+                                            class="col-3  d-flex bg-danger-subtle  border  border-danger border-opacity-10 rounded-2   justify-content-center align-items-center iconBox">
+                                            <div
+                                                class="bg-danger p-1  rounded-circle d-flex justify-content-center align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24">
+                                                    <path fill="#ffffff"
+                                                        d="M22 19H2v2h20zM4 15c0 .5.2 1 .6 1.4s.9.6 1.4.6V6c-.5 0-1 .2-1.4.6S4 7.5 4 8zm9.5-9h-3c0-.4.1-.8.4-1.1s.6-.4 1.1-.4c.4 0 .8.1 1.1.4c.2.3.4.7.4 1.1M7 6v11h10V6h-2q0-1.2-.9-2.1C13.2 3 12.8 3 12 3q-1.2 0-2.1.9T9 6zm11 11c.5 0 1-.2 1.4-.6s.6-.9.6-1.4V8c0-.5-.2-1-.6-1.4S18.5 6 18 6z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-9 d-flex flex-column justify-content-center">
+                                            <p class="mb-0 " style="font-size: 14px; ">Total Categories</p>
+                                            <h6 class="mb-0 " style="padding-left: 06px; font-size: 18px;">5</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row g-3 ms-auto me-auto">
+                        <div class="col-12  col-sm-6 col-lg-3 ">
+                            <a href="" class="text-body text-decoration-none">
+                                <div class="shadow-sm p-2 rounded bg-white  ">
+                                    <div class="row m-2 ">
+                                        <div
+                                            class="col-3  d-flex bg-success-subtle  border  border-success border-opacity-10 rounded-2   justify-content-center align-items-center iconBox">
+                                            <div
+                                                class="bg-success p-1  rounded-circle d-flex justify-content-center align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24">
+                                                    <path fill="#ffffff"
+                                                        d="M7 15h2c0 1.08 1.37 2 3 2s3-.92 3-2c0-1.1-1.04-1.5-3.24-2.03C9.64 12.44 7 11.78 7 9c0-1.79 1.47-3.31 3.5-3.82V3h3v2.18C15.53 5.69 17 7.21 17 9h-2c0-1.08-1.37-2-3-2s-3 .92-3 2c0 1.1 1.04 1.5 3.24 2.03C14.36 11.56 17 12.22 17 15c0 1.79-1.47 3.31-3.5 3.82V21h-3v-2.18C8.47 18.31 7 16.79 7 15">
+                                                    </path>
+                                                </svg>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-9 d-flex flex-column justify-content-center">
+                                            <p class="mb-0 " style="font-size: 14px; ">Total Sales</p>
+                                            <h6 class="mb-0 " style="padding-left: 06px; font-size: 18px;">0.00</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-12  col-sm-6 col-lg-3   ">
+
+                            <div class="shadow-sm p-2 rounded bg-white  ">
+                                <div class="row m-2 ">
+                                    <div
+                                        class="col-3  d-flex bg-success-subtle  border  border-success border-opacity-10 rounded-2   justify-content-center align-items-center iconBox">
+                                        <div
+                                            class="bg-success p-1  rounded-circle d-flex justify-content-center align-items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24">
+                                                <path fill="#ffffff"
+                                                    d="M7 15h2c0 1.08 1.37 2 3 2s3-.92 3-2c0-1.1-1.04-1.5-3.24-2.03C9.64 12.44 7 11.78 7 9c0-1.79 1.47-3.31 3.5-3.82V3h3v2.18C15.53 5.69 17 7.21 17 9h-2c0-1.08-1.37-2-3-2s-3 .92-3 2c0 1.1 1.04 1.5 3.24 2.03C14.36 11.56 17 12.22 17 15c0 1.79-1.47 3.31-3.5 3.82V21h-3v-2.18C8.47 18.31 7 16.79 7 15">
+                                                </path>
+                                            </svg>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-9 d-flex flex-column justify-content-center">
+                                        <p class="mb-0 " style="font-size: 14px; ">Total Sales Due</p>
+                                        <h6 class="mb-0 " style="padding-left: 06px; font-size: 18px;">0.00</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12  col-sm-6 col-lg-3   ">
+                            <a href="" class="text-body text-decoration-none">
+                                <div class="shadow-sm p-2 rounded bg-white  ">
+                                    <div class="row m-2 ">
+                                        <div
+                                            class="col-3  d-flex bg-warning-subtle  border  border-warning border-opacity-10 rounded-2   justify-content-center align-items-center iconBox">
+                                            <div
+                                                class="bg-warning p-1  rounded-circle d-flex justify-content-center align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24">
+                                                    <path fill="#ffffff"
+                                                        d="M7 15h2c0 1.08 1.37 2 3 2s3-.92 3-2c0-1.1-1.04-1.5-3.24-2.03C9.64 12.44 7 11.78 7 9c0-1.79 1.47-3.31 3.5-3.82V3h3v2.18C15.53 5.69 17 7.21 17 9h-2c0-1.08-1.37-2-3-2s-3 .92-3 2c0 1.1 1.04 1.5 3.24 2.03C14.36 11.56 17 12.22 17 15c0 1.79-1.47 3.31-3.5 3.82V21h-3v-2.18C8.47 18.31 7 16.79 7 15">
+                                                    </path>
+                                                </svg>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-9 d-flex flex-column  justify-content-center">
+                                            <p class="mb-0 " style="font-size: 14px; ">Total Purchases</p>
+                                            <h6 class="mb-0 " style="padding-left: 06px; font-size: 18px;">400.00</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-12  col-sm-6 col-lg-3   ">
+                            <div class="shadow-sm p-2 rounded bg-white  ">
+                                <div class="row m-2 ">
+                                    <div
+                                        class="col-3  d-flex bg-warning-subtle  border  border-warning border-opacity-10 rounded-2   justify-content-center align-items-center iconBox">
+                                        <div
+                                            class="bg-warning p-1  rounded-circle d-flex justify-content-center align-items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24">
+                                                <path fill="#ffffff"
+                                                    d="M7 15h2c0 1.08 1.37 2 3 2s3-.92 3-2c0-1.1-1.04-1.5-3.24-2.03C9.64 12.44 7 11.78 7 9c0-1.79 1.47-3.31 3.5-3.82V3h3v2.18C15.53 5.69 17 7.21 17 9h-2c0-1.08-1.37-2-3-2s-3 .92-3 2c0 1.1 1.04 1.5 3.24 2.03C14.36 11.56 17 12.22 17 15c0 1.79-1.47 3.31-3.5 3.82V21h-3v-2.18C8.47 18.31 7 16.79 7 15">
+                                                </path>
+                                            </svg>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-9 d-flex flex-column justify-content-center">
+                                        <p class="mb-0 " style="font-size: 14px; ">Total Purchases Due</p>
+                                        <h6 class="mb-0 " style="padding-left: 06px; font-size: 18px;">400.00</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </nav>
+                <div class="chart-container m-3 bg-white p-3 rounded shadow-sm">
+                    <h5 class="mb-3 text-muted" style="font-size: 14px;font-weight: 600;">Sales Overview</h5>
+                    <hr width="100%" />
+                    <div class="chart-container mt-4">
+                        <div class=" border-0">
+                            <div class="card-body pe-4">
+                                <h6 class=""
+                                    style="text-align: center; font-size: 14px;font-weight: 600; font-family: Helvetica, Arial, sans-serif; opacity: 1;">
+                                    Last 30 days Sales Report</h6>
+                                <div class="justify-content-end bg-white d-flex ms-2 mb-1 ">
+                                    <button class=" p-0 border-0   rounded-circle  bg-white">
+                                        <svg class="svgIcon  text-align-center text-muted chartIcon"
+                                            xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path
+                                                d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z">
+                                            </path>
+                                        </svg>
 
-            <div class="container text-muted fw-bold m-2 pt-2 pb-2">
-                <h7>Dashboard</h7>
-            </div>
+                                    </button>
+                                    <button class="p-0 border-0 rounded-circle bg-white ">
+                                        <svg class="svgIcon text-align-center   chartIcon"
+                                            xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path
+                                                d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z">
+                                            </path>
+                                        </svg>
 
-            <div class="container-fluid mt-1 mb-1 ">
-                <div class="row g-3 ms-auto me-auto mb-3">
-                    <div class="col-12  col-sm-6 col-lg-3   ">
-                        <div class="shadow-sm p-1 rounded bg-white dash_el">
-                            <div class="row m-1 ">
-                                <div class="col-3 d-flex   justify-content-center align-items-center icon_box"
-                                    style="background-color: #cfe1ff;">
-                                    <i class="fa-solid text-primary fa-circle-user fs-4" style="margin: 8px;"></i>
+                                    </button>
+                                    <button class="p-0 border-0 rounded-circle bg-white">
+                                        <svg class="svgIcon text-align-center    chartIcon"
+                                            xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                                            width="20">
+                                            <path
+                                                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                            </path>
+                                            <path d="M0 0h24v24H0V0z" fill="none"></path>
+                                            <path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="p-0 border-0 rounded-circle bg-white"><svg
+                                            class=" svgIcon text-align-center   chartIcon"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" height="20" viewBox="0 0 24 24"
+                                            width="20">
+                                            <defs>
+                                                <path d="M0 0h24v24H0z" id="a"></path>
+                                            </defs>
+                                            <clipPath id="b">
+                                                <use overflow="visible" xlink:href="#a"></use>
+                                            </clipPath>
+                                            <path clip-path="url(#b)"
+                                                d="M23 5.5V20c0 2.2-1.8 4-4 4h-7.3c-1.08 0-2.1-.43-2.85-1.19L1 14.83s1.26-1.23 1.3-1.25c.22-.19.49-.29.79-.29.22 0 .42.06.6.16.04.01 4.31 2.46 4.31 2.46V4c0-.83.67-1.5 1.5-1.5S11 3.17 11 4v7h1V1.5c0-.83.67-1.5 1.5-1.5S15 .67 15 1.5V11h1V2.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5V11h1V5.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5z">
+                                            </path>
+                                        </svg>
+
+
+                                    </button>
+                                    <button class="  p-0 border-0 rounded-circle bg-white">
+                                        <svg class="svgIcon text-align-center  chartIcon" height="20"
+                                            viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                        </svg>
+
+                                    </button>
+                                    <button class=" p-0 border-0 rounded-circle bg-white">
+                                        <svg class="svgIcon text-align-center chartIcon"
+                                            xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24">
+                                            <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                                        </svg>
+
+                                    </button>
+
                                 </div>
-                                <div class="col-9 d-flex flex-column justify-content-center">
-                                    <p class="mb-0 " style="font-size: 14px; ">Total Customers</p>
-                                    <h6 class="mb-0 fw-semibold" style="padding-left: 06px; ">22</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 ">
-                        <div class="shadow-sm p-1 rounded bg-white dash_el">
-                            <div class="row m-1 ">
-                                <div class="col-3 d-flex   justify-content-center align-items-center icon_box"
-                                    style="background-color: #cfe1ff;">
-                                    <i class="fa-solid text-primary fa-circle-user fs-4" style="margin: 8px;"></i>
-                                </div>
-                                <div class="col-9 d-flex flex-column justify-content-center">
-                                    <p class="mb-0 " style="font-size: 14px; ">Total Suppliers</p>
-                                    <h6 class="mb-0 fw-semibold" style="padding-left: 06px;">1</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 ">
-                        <div class="shadow-sm p-1 rounded bg-white dash_el">
-                            <div class="row m-1 ">
-                                <div class="col-3 d-flex   justify-content-center align-items-center icon_box"
-                                    style="background-color: #ffdede;">
-                                    <i class="fa-solid fa-solid fa-suitcase text-danger  fs-4" style="margin: 8px;"></i>
-                                </div>
-                                <div class="col-9 d-flex flex-column justify-content-center">
-                                    <p class="mb-0 " style="font-size: 14px; ">Total Products</p>
-                                    <h6 class="mb-0 fw-semibold" style="padding-left: 06px;">16</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 ">
-                        <div class="shadow-sm p-1 rounded bg-white dash_el">
-                            <div class="row m-1 ">
-                                <div class="col-3 d-flex   justify-content-center align-items-center icon_box"
-                                    style="background-color: #ffdede;">
-                                    <i class="fa-solid fa-suitcase text-danger fs-4" style="margin: 8px;"></i>
-                                </div>
-                                <div class="col-9 d-flex flex-column justify-content-center">
-                                    <p class="mb-0 " style="font-size: 14px; ">Total Categories</p>
-                                    <h6 class="mb-0 fw-semibold" style="padding-left: 06px;">5</h6>
-                                </div>
+
+                                <canvas id="salesChart" width="400" height="100"></canvas>
+                                <p class=" text-muted" style="text-align: center; font-size: 0.8rem;font-weight: bold;">
+                                    Dates</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row g-3 ms-auto me-auto">
-                    <div class="col-12 col-sm-6 col-lg-3 ">
-                        <div class="shadow-sm p-1 rounded bg-white dash_el">
-                            <div class="row m-1 ">
-                                <div class="col-3 d-flex justify-content-center align-items-center icon_box"
-                                    style="background-color:rgb(165, 255, 165);">
-                                    <i class="fa-solid fa-sack-dollar text-success  fs-4" style="margin: 8px;"></i>
-                                </div>
-                                <div class="col-9 d-flex flex-column justify-content-center">
-                                    <p class="mb-0 " style="font-size: 14px; ">Total Sales</p>
-                                    <h6 class="mb-0 fw-semibold" style="padding-left: 06px;">111,234.45</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 ">
-                        <div class="shadow-sm p-1 rounded bg-white dash_el">
-                            <div class="row m-1 ">
-                                <div class="col-3 d-flex justify-content-center align-items-center icon_box"
-                                    style="background-color:rgb(165, 255, 165);">
-                                    <i class="fa-solid fa-sack-dollar text-success  fs-4" style="margin: 8px;"></i>
-                                </div>
-                                <div class="col-9 d-flex flex-column justify-content-center">
-                                    <p class="mb-0 " style="font-size: 14px; ">Total Sales Due</p>
-                                    <h6 class="mb-0 fw-semibold" style="padding-left: 06px;">0.00</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 ">
-                        <div class="shadow-sm p-1 rounded bg-white dash_el">
-                            <div class="row m-1 ">
-                                <div class="col-3 d-flex   justify-content-center align-items-center icon_box"
-                                    style="background-color:rgb(255, 236, 200);">
-                                    <i class="fa-solid text-warning fa-dollar-sign fs-4" style="margin: 8px;"></i>
-                                </div>
-                                <div class="col-9 d-flex flex-column justify-content-center">
-                                    <p class="mb-0 " style="font-size: 14px; ">Total Purchases</p>
-                                    <h6 class="mb-0 fw-semibold" style="padding-left: 06px;">145,003.00</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 ">
-                        <div class="shadow-sm p-1 rounded bg-white dash_el">
-                            <div class="row m-1 ">
-                                <div class="col-3 d-flex   justify-content-center align-items-center icon_box"
-                                    style="background-color:rgb(255, 236, 200);">
-                                    <i class="fa-solid text-warning fa-dollar-sign fs-4" style="margin: 8px;"></i>
-                                </div>
-                                <div class="col-9 d-flex flex-column justify-content-center">
-                                    <p class="mb-0 " style="font-size: 14px; ">Total Purchases Due</p>
-                                    <h6 class="mb-0 fw-semibold" style="padding-left: 06px;">146,042.00</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="chart-container m-3 bg-white p-3 rounded shadow-sm">
-                <h5 class="mb-3 fw-semibold fs-6 text-muted">Sales Overview</h5>
-                <hr width="100%" />
-                <div class="chart-container mt-4">
-                    <div class=" border-0">
-                        <div class="card-body pe-4">
-                            <h6 class="text-muted" style="text-align: center; font-size: 0.8rem;font-weight: bold;">Last
-                                30 Days Sales Report</h6>
-                            <div class="justify-content-end d-flex ms-2 mb-1 ">
-                                <button class=" p-0 border-0 rounded-circle ">
-                                    <i class="fa-solid fa-circle-plus text-align-center fs-6 chard_icon "></i>
-                                </button>
-                                <button class="p-0 border-0 rounded-circle">
-                                    <i class="fa-solid fa-circle-minus text-align-center  fs-6 chard_icon"></i>
-                                </button>
-                                <button class="p-0 border-0 rounded-circle bg-white">
-                                    <i class="fa-solid fa-magnifying-glass-plus text-align-center  fs-6 chard_icon"></i>
-                                </button>
-                                <button class="p-0 border-0 rounded-circle bg-white">
-                                    <i class="fa-solid fa-hand text-align-center  fs-6 chard_icon"></i>
-                                </button>
-                                <button class="p-0 border-0 rounded-circle bg-white">
-                                    <i class="fa-solid fa-house text-align-center  fs-6 chard_icon"></i>
-                                </button>
-                                <button class=" p-0 border-0 rounded-circle bg-white">
-                                    <i class="fa-solid fa-sliders text-align-center  fs-6 chard_icon"></i>
-                                </button>
-                            </div>
 
-                            <canvas id="salesChart" width="380" height="65"></canvas>
-                            <p class=" text-muted" style="text-align: center; font-size: 0.8rem;font-weight: bold;">
-                                Dates</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </main>
-        <footer class="footer  bg-white text-black fw-bold text-muted " style="font-size: small; ">
-            &copy; 2025 Developed by <b>SoftLenze.com</b>
-        </footer>
+            </main>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <footer class="footer  bg-white text-black text-muted " style="font-size: small; ">
+        &copy; 2025 Developed by <b>SoftLenz.com</b>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
