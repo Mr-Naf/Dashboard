@@ -1,2 +1,2 @@
-bootstrap and svg icons use for icons tag
+bootstrap and svg icons use for icons 
 
